@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home page
+{% endblock title %}
+
+
+{% block content %}
+<!--<div id="con">
+        <img src="{% static 'images/img.jfif' %}" height="100px" width=100%>
+        
+        <div id="d1">
+            <img src="{% static 'images/one.gif' %}" height="385px" width="450px">
+        </div>
+        <div id="scon">
+            <form action="/show/" method="POST"> {% csrf_token %} 
+        
+
+                <table id="tbl" cellspacing="5" align="center">
+                    <tr><td></td><td><h5>{{err}}</h5></td></tr>
+                    <tr> <td><h3>City</h3></td>&nbsp;&nbsp;&nbsp;<td><input type="text" name="ci"required placeholder="City"></td> </tr>
+                    <tr></tr><tr></tr><tr></tr><tr></tr>
+                    <tr> <td><h3>Country</h3></td>&nbsp;&nbsp;&nbsp;<td><input type="text" name="co"required placeholder="Country"></td> </tr>
+                    <tr></tr><tr></tr><tr></tr><tr></tr>
+                    <tr> <td></td><td><input type="submit" value="Check" id="bt"> </td></tr>
+                </table>
+         
+            </form>
+        </div>
+        </div>
+    -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-8">
+                
+                <form action="/show/" method="POST"> {% csrf_token %} 
+        
+
+                    <table id="tbl" cellspacing="5" align="center">
+                        
+                        <tr> <td><h3>City</h3></td>&nbsp;&nbsp;&nbsp;<td><input type="text" name="ci"required placeholder="City"></td> </tr>
+                        <tr></tr><tr></tr><tr></tr><tr></tr>
+                        <tr> <td><h3>Country</h3></td>&nbsp;&nbsp;&nbsp;<td><input type="text" name="co"required placeholder="Country"></td> </tr>
+                        <tr></tr><tr></tr><tr></tr><tr></tr>
+                        <tr> <td></td><td><input type="submit" value="Check" id="bt"> </td></tr>
+                    </table>
+             
+                </form>
+               
+              
+            </div>
+                <div class="col-sm-2">
+                
+                </div>
+        </div>
+       
+</div>
+
+{% endblock content %}    

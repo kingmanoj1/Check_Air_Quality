@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock title %}
+    
+
+{% block content %}
+ <div id="main1" style="background-color:white">
+    <div id ="ahdr">About &nbsp;&nbsp;&nbsp;&nbsp;<br><h6 id="ahdr2"></h6></div>
+    <!--<div id="aside">
+
+        <img src="{%  static 'images/cont2.jpg' %}" height="405px" width="450px">
+    </div>
+    <div id="amain">
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;This weather site is a classic one and straightforward to use.
+            With many wonderful features, it has a smooth appearance and provides up-to-date and accurate information.
+            This website also has an interface with a weather-related section of images.
+            
+                   <li> Allows the user to get information on multiple cities</li>
+                    <li>Real-time updates</li>
+                    
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'home' %}" style="color:blue" id="w">Check Weather</a>
+                        {% else %}
+                            <h2 id="w"> for checking weather You must login first</h2>
+                    {% endif %}
+                        
+                    
+                   
+            
+    </div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-8">
+                
+                {% autoescape off %}
+                {{zero}}
+                {% endautoescape %}
+                <br><br>
+
+                <img src="{%  static 'images/airquality.png' %}" height="700px">
+                 <br>
+                 <br><br>
+             
+            </div>
+                <div class="col-sm-2">
+                
+                </div>
+        </div>
+       
+</div>
+
+    
+{% endblock content %}
+    

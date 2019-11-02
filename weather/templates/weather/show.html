@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    show Page    
+{% endblock title %}
+
+
+{% block content %}
+<div id="showcon">
+    <img src="{% static 'images/7kk.jpg' %}" height="500px" width=100%>
+    
+    <div id="smdl">
+        <div id="ddd">
+               <h1 style="color:white;"> Air Quality of {{city}} </h1>
+                <table  id="tbl2" cellspacing="20">
+                    
+                       
+                        <h1>AQI &nbsp;&nbsp;{{data.data.aqi}}</h1>
+                        {% if data.data.iaqi.pm25.v %}
+                        <h3>PM2.5 &nbsp;&nbsp;&nbsp; {{data.data.iaqi.pm25.v}}<br>
+                            {%endif%}
+                            {% if data.data.iaqi.pm25.v %}
+                        <h3>PM10 &nbsp;&nbsp;&nbsp;  {{data.data.iaqi.pm10.v}}<br></h3>
+                        {%endif%}
+                        {% if data.data.iaqi.pm25.v %}
+                        <h3>SO2  &nbsp;&nbsp;&nbsp;  {{data.data.iaqi.so2.v}}<br></h3>
+                        {%endif%}
+
+                            
+                        {% if data.data.iaqi.pm25.v %}
+                        <h3>CO  &nbsp;&nbsp;&nbsp;  {{data.data.iaqi.co.v}}<br></h3>
+                        {%endif%}
+
+                        {% if data.data.iaqi.pm25.v %}
+                        <h3>NO2  &nbsp;&nbsp;&nbsp;  {{data.data.iaqi.no2.v}}<br></h3>
+                        {%endif%}
+
+
+                        {% if data.data.iaqi.pm25.v %}
+                        <h3>O3  &nbsp;&nbsp;&nbsp;  {{data.data.iaqi.o3.v}}<br></h3>
+                        {%endif%}
+
+                        {% if data.data.iaqi.pm25.v %}
+                        <h4>temp  &nbsp;&nbsp;&nbsp;  {{data.data.iaqi.t.v}} &#176;C<br></h4>
+                        {%endif%}
+
+                        {% if data.data.iaqi.pm25.v %}
+                        <h4>Wind &nbsp;&nbsp;&nbsp;  {{data.data.iaqi.w.v}}<br></h4>
+                        {%endif%}
+                        
+                    </h2></tr>
+                    
+
+            </table>
+        </div>
+
+    </div>
+   
+</div>
+{% endblock content %}
+    
+    
+<!--<div id="subshow">
+<h1>Hello {{name}}</h1>
+Temprature : {{temp}}C<br>
+Humidity : {{humi}}<br>
+Description: {{desc}}<br><br>
+
+<img src="{{image}}"><br>
+</div>
+
+<br><br>
+
+
+
+
+
+-->
+<h3>Air Quality Index (AQI)</h3>
+
+<h5>{{city}}</h5>{{name}}
+<h1>{{aqi}}</h1>
+    
+<table>
+    <thead>
+        <th></th>
+        <th>Current</th>
+    </thead>
+
+    <tbody>
+        <tr>
+                <td>PM2.5</td>
+                <td>{{data.data.iaqi.pm25.v}}</td>            
+        </tr>
+
+        <tr>
+                <td>PM10</td>
+                <td>{{data.data.iaqi.pm10.v}}</td>            
+        </tr>
+
+        <tr>
+                <td>O3</td>
+                <td>{{o3}}</td>            
+        </tr>
+
+        <tr>
+                <td>NO2</td>
+                <td>{{no2}}</td>            
+        </tr>
+
+        <tr>
+                <td>SO2</td>
+                <td>{{data.data.iaqi.so2.v}}</td>            
+        </tr>
+
+        <tr>
+                <td>CO</td>
+                <td>{{co}}</td>            
+        </tr>
+        <tr>
+                <td>Temprature</td>
+                <td>{{t}} C</td>            
+        </tr>
+        <tr>
+                <td>Wind</td>
+                <td>{{data.data.iaqi.w.v}}</td>            
+        </tr>
+        
+    </tbody>
+
+    <tfoot></tfoot>
+
+</table>
